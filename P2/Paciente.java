@@ -25,7 +25,7 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return "ID: " + id + " | Nome: " + nome + " | Idade: " + idade + " | Peso: " + peso + " | Altura: " + altura;
+        return "ID: " + id + " - Nome: " + nome + " - Idade: " + idade + " - Peso: " + peso + " - Altura: " + altura;
     }
     public static class DAO {
         public void salvar(Paciente p) throws SQLException {
@@ -90,5 +90,5 @@ public class Paciente {
             return lista;
         }
     }
-}   }
-}
+}   
+

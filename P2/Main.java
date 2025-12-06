@@ -63,14 +63,11 @@ public class Main extends JFrame {
             float altura = Float.parseFloat(campoAltura.getText());
 
             if (nome.isEmpty()) throw new Exception("Nome é obrigatorio");
-            // if (idade.isEmpty()) throw new Exception("Idade é obrigatoria");
-            // if (peso.isEmpty()) throw new Exception("Peso é obrigatorio");
-            // if (altura.isEmpty()) throw new Exception("Altura é obrigatoria");
 
             Paciente p = new Paciente(0, nome, idade, peso, altura);
             dao.salvar(p);
 
-            JOptionPane.showMessageDialog(this, "Paciente incluid com ID: " + p.getId());
+            JOptionPane.showMessageDialog(this, "Paciente incluido com ID: " + p.getId());
             limpar();
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Erro nos dados: Verifique Idade, Peso ou Altura.");
